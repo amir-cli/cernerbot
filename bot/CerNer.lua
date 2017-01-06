@@ -212,6 +212,15 @@ function create_config( )
   config = {
     enabled_plugins = {
     "Admin",
+			"rm",
+			"filter",
+			"saveplug",
+			"sendplug",
+			"Support",
+			"setsudo",
+			"invite",
+			"LEAVE",
+			"ping",
     "Manager",
     "all",
     "plugins",
