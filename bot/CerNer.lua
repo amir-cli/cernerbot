@@ -221,7 +221,7 @@ function create_config( )
     "inpm",
     "Me",
     "antispam",
-    "banhammer",
+    "BanHammer",
     },
     sudo_users = {317391435}, --Sudo users
     moderation = {data = 'data/moderation.json'},
