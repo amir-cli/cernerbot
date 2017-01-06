@@ -39,7 +39,7 @@ local function check_member_super(cb_extra, success, result)
       end
       data[tostring(groups)][tostring(msg.to.id)] = msg.to.id
       save_data(_config.moderation.data, data)
-	  local text = 'CeerNer\n<b>SuperGroup has been added!</b>'
+	  local text = 'CerNer\n<b>SuperGroup has been added!</b>'
       return reply_msg(msg.id, text, ok_cb, false)
     end
   end
@@ -1033,7 +1033,7 @@ function show_supergroup_settingsmod(msg, target)
   local gp_type = data[tostring(msg.to.id)]['group_type']
   
   local settings = data[tostring(target)]['settings']
-  local text = "<b>CerNer settings</b>\n><b>Lock links ~ </b><code>"..settings.lock_link.."</code>\n<b>>Lock contacts ~ </b><code>"..settings.lock_contacts.."</code>\n<b>>Lock flood </b>~ <code>"..settings.flood.."</code>\n<b>>Flood sensitivity </b>~ 200|<code>"..NUM_MSG_MAX.."</code>\n<b>>Lock spam ~</b> <code>"..settings.lock_spam.."</code>\n><b>Lock Arabic ~ </b><code>"..settings.lock_arabic.."</code>\n><b>Lock Member ~ </b><code>"..settings.lock_member.."</code>\n<b>>Lock RTL ~</b> <code>"..settings.lock_rtl.."</code>\n<b>>Lock Tgservice ~ </b><code>"..settings.lock_tgservice.."</code>\n<b>>Lock sticker ~ </b><code>"..settings.lock_sticker.."</code>\n><b>Lock inline ~ </b><code>"..settings.inline.."</code>\n><b>Lock tag(#) ~</b> <code>"..settings.tag.."</code>\n><b>Lock emoji ~ </b><code>"..settings.emoji.."</code>\n<b>>Lock english ~ </b><code>"..settings.english.."</code>\n<b>>Lock fwd(forward) ~ </b><code>"..settings.lock_fwd.."</code>\n<b>>Lock reply ~</b> <code>"..settings.reply.."</code>\n<b>>Lock join ~ </b><code>"..settings.join.."</code>\n><b>Lock username(@) ~ </b><code>"..settings.username.."</code>\n<b>>Lock media ~ </b><code>"..settings.media.."</code>\n<b>>Lock fosh ~ </b><code>"..settings.fosh.."</code>\n<b>>Lock leave ~ </b><code>"..settings.leave.."</code>\n><b>Lock bots ~ </b><code>"..bots_protection.."</code>\n<b>>Lock operator ~ </b><code>"..settings.operator.."</code>\n___________CerNer Team____________\n><b>Lock all ~ </b><code>"..settings.all.."</code>\n<b>>public ~ </b><code>"..settings.public.."</code>\n><b>strict settings ~</b> <code>"..settings.strict.."</code>\n<i>CerNerTeam</i>\n <code>channel Team</code>  @CerNerTeam"
+  local text = "<b>CerNer settings</b>\n><b>Lock links ~ </b><code>"..settings.lock_link.."</code>\n<b>>Lock contacts ~ </b><code>"..settings.lock_contacts.."</code>\n<b>>Lock flood </b>~ <code>"..settings.flood.."</code>\n<b>>Flood sensitivity </b>~ 200|<code>"..NUM_MSG_MAX.."</code>\n<b>>Lock spam ~</b> <code>"..settings.lock_spam.."</code>\n><b>Lock Arabic ~ </b><code>"..settings.lock_arabic.."</code>\n><b>Lock Member ~ </b><code>"..settings.lock_member.."</code>\n<b>>Lock RTL ~</b> <code>"..settings.lock_rtl.."</code>\n<b>>Lock Tgservice ~ </b><code>"..settings.lock_tgservice.."</code>\n<b>>Lock sticker ~ </b><code>"..settings.lock_sticker.."</code>\n><b>Lock inline ~ </b><code>"..settings.inline.."</code>\n><b>Lock tag(#) ~</b> <code>"..settings.tag.."</code>\n><b>Lock emoji ~ </b><code>"..settings.emoji.."</code>\n<b>>Lock english ~ </b><code>"..settings.english.."</code>\n<b>>Lock fwd(forward) ~ </b><code>"..settings.lock_fwd.."</code>\n<b>>Lock reply ~</b> <code>"..settings.reply.."</code>\n<b>>Lock join ~ </b><code>"..settings.join.."</code>\n><b>Lock username(@) ~ </b><code>"..settings.username.."</code>\n<b>>Lock media ~ </b><code>"..settings.media.."</code>\n<b>>Lock fosh ~ </b><code>"..settings.fosh.."</code>\n<b>>Lock leave ~ </b><code>"..settings.leave.."</code>\n><b>Lock bots ~ </b><code>"..bots_protection.."</code>\n<b>>Lock operator ~ </b><code>"..settings.operator.."</code>\n___________CerNer Team____________\n><b>Lock all ~ </b><code>"..settings.all.."</code>\n<b>>public ~ </b><code>"..settings.public.."</code>\n><b>strict settings ~</b> <code>"..settings.strict.."</code>\n<i>CerNerTeam</i>\n <code>channel Team</code>  @CerNerCH"
   return text
 end
 local function promote_admin(receiver, member_username, user_id)
@@ -1593,7 +1593,7 @@ local function run(msg, matches)
 				return
 			end
 			if is_super_group(msg) then
-				return reply_msg(msg.id, SuperGroup is already added.', ok_cb, false)
+				return reply_msg(msg.id, 'SuperGroup is already added.', ok_cb, false)
 			end
 			print("SuperGroup "..msg.to.print_name.."("..msg.to.id..") added")
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] added SuperGroup")
@@ -2710,8 +2710,8 @@ return {
 	"msg.to.peer_id",
 	"%[(document)%]",
 	"%[(photo)%]",
+	"%[(gif)%]",
 	"%[(video)%]",
-	"%[(gifs)%]",
 	"%[(audio)%]",
 	"%[(contact)%]",
 	"^!!tgservice (.+)$",
