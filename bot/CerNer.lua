@@ -213,6 +213,7 @@ function create_config( )
     enabled_plugins = {
  "Msg",
 			"Admin",
+			"expire",
 			"rm",
 			"filter",
 			"saveplug",
