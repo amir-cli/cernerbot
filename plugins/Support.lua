@@ -5,7 +5,7 @@
 ]]
 do
     local function run(msg, matches)
-    local support = '1032404398'
+    local support = '1050575893'
     local data = load_data(_config.moderation.data)
     local name_log = user_print_name(msg.from)
         if matches[1] == 'support' or 'tosupport' then
