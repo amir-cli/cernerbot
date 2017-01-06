@@ -236,115 +236,159 @@ function create_config( )
     sudo_users = {317391435}, --Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[ By CerNer Team channel Id : @CerNerTeam]],
-    help_text_realm = [[CerNer Help
-
-member help
-
-id
-
-help
-id |reply|username
-
-ban|reply|username
-
-kick|reply|username
-
-block|reply|username
-
-kickme
-
-newlink
-
-setlink
-
-link
-
-locklinks|fwd|reply|inline|operator|join|sticker|contacts|eng(english)|arabic|bots|leave|tag|emoji(??)|rtl|fosh|tgservice|media|username*
-
-unlocklinks|fwd|reply|inline|operator|join|sticker|contacts|eng(english)|arabic|bots|leave|tag|emoji(??)|rtl|fosh|tgservice|media|username*
-
-muteslist
-
-muteall|text|gifs|audio|documents|video|photo
-
-unmuteall|text|gifs|audio|documents|video|photo
-
-silent|reply|username
-
-unsilent|reply|username
-
-silentlist
-
-muteslist
-
-clean~modlist|rules|abuot|
-
-set~flood|rules|abuot|photo|name
-
-settings
-
+    help_text_realm = [[راهنمای دستورات ربات CerNer
+<b>lock | contacts-links-flood-spam-arabic-member-rtl-sticker-tag-username-bots-english-forward
+بستن امکانات بالا
+unlock | contacts-links-flood-spam-arabic-member-rtl-sticker-tag-username-bots-english-forward
+بازکردن امکانات بالا
+mute | gifs-audio-photo-video-text-documents-all
+موت کردن امکانات بالا
+ unmute | gifs-audio-photo-video-text-documents-all
+آنموت کردن امکانات بالا
+promote @username /reply
+کمک مدیر کردن یک شخص
+demote @username
+حذف از مدیریت 
+modlist
+مدیران گروه
+ban @username 
+مسدود کردن فرد
+unban @username
+خارج کردن فرد از حالت مسدودیت
+rmsg |number
+پاک کردن تعداد پیام های گروه
+admins
+لیست ادمین های گروه
 owner
-
-promote
-
-me
-
-del~delete Msg ]], -- Help Realm-Gp
-    help_text = [[ ]], --Help Normal-Gp
-	help_text_super =[[CerNer Help
-
-member help
-
-id
-
-help
-id |reply|username
-
-ban|reply|username
-
-kick|reply|username
-
-block|reply|username
-
-kickme
-
+مدیر گروه
+ kick reply|id
+اخراج فرد \ریپلی\ایدی
+ id
+اطلاعات گروه و ‌‌ما
+setname متن
+تغییر نام گروه
+ setphoto
+گذاشتن عکس گروه و یا تعویض ان
+setrules متن
+تنظیم قوانین
+setabout متن
+تعیین متن توضیحات گروه
 newlink
-
-setlink
-
+ایجاد لینک
 link
-
-locklinks|fwd|reply|inline|operator|join|sticker|contacts|eng(english)|arabic|bots|leave|tag|emoji(??)|rtl|fosh|tgservice|media|username*
-
-unlocklinks|fwd|reply|inline|operator|join|sticker|contacts|eng(english)|arabic|bots|leave|tag|emoji(??)|rtl|fosh|tgservice|media|username*
-
+لینک گروه
+rules
+قوانین گروه
+  setflood [عدد]
+تنظیم مقدار مجاز پیام دادن ثانیه
+  settings
+تنظیمات
 muteslist
-
-muteall|text|gifs|audio|documents|video|photo
-
-unmuteall|text|gifs|audio|documents|video|photo
-
-silent|reply|username
-
-unsilent|reply|username
-
-silentlist
-
-muteslist
-
-clean~modlist|rules|abuot|
-
-set~flood|rules|abuot|photo|name
-
-settings
-
+موت لیست
+clean~rules|about|modlist|mutelist|bots</b>
+پاک کردن لیست مدیران ~ قوانین~رباتها~درباره گروه]], -- Help Realm-Gp
+    help_text = [[راهنمای دستورات ربات CerNer
+<b>lock | contacts-links-flood-spam-arabic-member-rtl-sticker-tag-username-bots-english-forward
+بستن امکانات بالا
+unlock | contacts-links-flood-spam-arabic-member-rtl-sticker-tag-username-bots-english-forward
+بازکردن امکانات بالا
+mute | gifs-audio-photo-video-text-documents-all
+موت کردن امکانات بالا
+ unmute | gifs-audio-photo-video-text-documents-all
+آنموت کردن امکانات بالا
+promote @username /reply
+کمک مدیر کردن یک شخص
+demote @username
+حذف از مدیریت 
+modlist
+مدیران گروه
+ban @username 
+مسدود کردن فرد
+unban @username
+خارج کردن فرد از حالت مسدودیت
+rmsg |number
+پاک کردن تعداد پیام های گروه
+admins
+لیست ادمین های گروه
 owner
-
-promote
-
-me
-
-del~delete Msg]], -- Help Super-Gp
+مدیر گروه
+ kick reply|id
+اخراج فرد \ریپلی\ایدی
+ id
+اطلاعات گروه و ‌‌ما
+setname متن
+تغییر نام گروه
+ setphoto
+گذاشتن عکس گروه و یا تعویض ان
+setrules متن
+تنظیم قوانین
+setabout متن
+تعیین متن توضیحات گروه
+newlink
+ایجاد لینک
+link
+لینک گروه
+rules
+قوانین گروه
+  setflood [عدد]
+تنظیم مقدار مجاز پیام دادن ثانیه
+  settings
+تنظیمات
+muteslist
+موت لیست
+clean~rules|about|modlist|mutelist|bots</b>
+پاک کردن لیست مدیران ~ قوانین~رباتها~درباره گروه ]], --Help Normal-Gp
+	help_text_super =[[راهنمای دستورات ربات CerNer
+<b>lock | contacts-links-flood-spam-arabic-member-rtl-sticker-tag-username-bots-english-forward
+بستن امکانات بالا
+unlock | contacts-links-flood-spam-arabic-member-rtl-sticker-tag-username-bots-english-forward
+بازکردن امکانات بالا
+mute | gifs-audio-photo-video-text-documents-all
+موت کردن امکانات بالا
+ unmute | gifs-audio-photo-video-text-documents-all
+آنموت کردن امکانات بالا
+promote @username /reply
+کمک مدیر کردن یک شخص
+demote @username
+حذف از مدیریت 
+modlist
+مدیران گروه
+ban @username 
+مسدود کردن فرد
+unban @username
+خارج کردن فرد از حالت مسدودیت
+rmsg |number
+پاک کردن تعداد پیام های گروه
+admins
+لیست ادمین های گروه
+owner
+مدیر گروه
+ kick reply|id
+اخراج فرد \ریپلی\ایدی
+ id
+اطلاعات گروه و شما
+setname متن
+تغییر نام گروه
+ setphoto
+گذاشتن عکس گروه و یا تعویض ان
+setrules متن
+تنظیم قوانین
+setabout متن
+تعیین متن توضیحات گروه
+newlink
+ایجاد لینک
+link
+لینک گروه
+rules
+قوانین گروه
+  setflood [عدد]
+تنظیم مقدار مجاز پیام دادن ثانیه
+  settings
+تنظیمات
+muteslist
+موت لیست
+clean~rules|about|modlist|mutelist|bots</b>
+پاک کردن لیست مدیران ~ قوانین~رباتها~درباره گروه]], -- Help Super-Gp
   }
   serialize_to_file(config, './data/config.lua')
   print('Config Address ./data/config.lua')
