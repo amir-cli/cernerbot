@@ -124,7 +124,7 @@ local function kick_ban_res(extra, success, result)
         redis:srem(hash, member_id)
         return 'Done\n User Unbanned'
       elseif get_cmd == 'banall' then
-        send_large_msg(receiver, '<b>Done!</b>\nUser @'..member..' ['..member_id..'] globally banned')
+        send_large_msg(receiver, '<i>این کونی</i>\n @'..member..' ['..member_id..']<i>از تمام گروه های تحت مدیریت کرنر مسدود شد</i>')
 		banall_user(member_id)
       elseif get_cmd == 'unbanall' then
         send_large_msg(receiver, '<b>Done!</b>\nUser @'..member..' ['..member_id..'] globally unbanned')
