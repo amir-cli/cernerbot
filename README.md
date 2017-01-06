@@ -16,6 +16,7 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 ```sh
 git clone https://github.com/amir-cli/cernerbot
 cd cernerbot
+ chmod +x launch.sh
 ./launch.sh install 
 ./launch.sh # add phone
 ```
