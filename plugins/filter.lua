@@ -110,13 +110,13 @@ end
 
 return {
   patterns = {
-  "^[!/](filter) (+) (.*)$",
-  "^[!/](filter) (-) (.*)$",
-    "^[!/](filterlist)$",
-    "^[!/](clean) (.*)",
+  "^(filter) (+) (.*)$",
+  "^(filter) (-) (.*)$",
+    "^(filterlist)$",
+    "^(clean) (.*)",
 "^(.+)$",
 	   
   },
   run = run
 }
---------------team @tele_open
+--------------mrcliapi
