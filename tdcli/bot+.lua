@@ -580,7 +580,7 @@ end
       if redis:get(link) then
         link = "YE"
       else
-        link = "NO
+        link = "NO"
       end
 
       local username = 'usernametg:'..chat_id
