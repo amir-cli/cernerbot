@@ -1,5 +1,5 @@
 #!/bin/bash
 
-./tg -s bot.lua
+./tg -s bot+.lua
 
 
