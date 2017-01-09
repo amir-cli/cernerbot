@@ -8,8 +8,7 @@ redis = (loadfile "./libs/redis.lua")()
 serpent = require('serpent')
 serp = require 'serpent'.block
 sudo_users = {
-  238773538,
-  173606679,
+  317391435,
   0
 }
 
@@ -200,23 +199,23 @@ function tdcli_update_callback(data)
       if input == "PING" then
         tdcli.sendText(chat_id, msg.id_, 0, 1, nil, '<b>PONG</b>', 1, 'html')
       end
-      if input:match("^[#!/][Ii][Dd]$") then
-        tdcli.sendText(chat_id, msg.id_, 0, 1, nil, '<b>SuperGroup ID : </b><code>'..string.sub(chat_id, 5,14)..'</code>\n<b>User ID : </b><code>'..user_id..'</code>\n<b>Channel : </b>@MuteTeam', 1, 'html')
+      if input:match("^[Ii][Dd]$") then
+        tdcli.sendText(chat_id, msg.id_, 0, 1, nil, '<b>SuperGroup ID : </b><code>'..string.sub(chat_id, 5,14)..'</code>\n<b>User ID : </b><code>'..user_id..', 1, 'html')
       end
 
-      if input:match("^[#!/][Pp][Ii][Nn]$") and reply_id and is_owner(msg) then
+      if input:match("^[Pp][Ii][Nn]$") and reply_id and is_owner(msg) then
         tdcli.sendText(chat_id, msg.id_, 0, 1, nil, '<b>Message Pinned</b>', 1, 'html')
         tdcli.pinChannelMessage(chat_id, reply_id, 1)
       end
 
-      if input:match("^[#!/][Uu][Nn][Pp][Ii][Nn]$") and reply_id and is_owner(msg) then
+      if input:match("^[Uu][Nn][Pp][Ii][Nn]$") and reply_id and is_owner(msg) then
         tdcli.sendText(chat_id, msg.id_, 0, 1, nil, '<b>Message UnPinned</b>', 1, 'html')
         tdcli.unpinChannelMessage(chat_id, reply_id, 1)
       end
 
 
       -----------------------------------------------------------------------------------------------------------------------------
-      if input:match('^[!#/]([Ss]etowner)$') and is_owner(msg) and msg.reply_to_message_id_ then
+      if input:match('^([Ss]etowner)$') and is_owner(msg) and msg.reply_to_message_id_ then
         tdcli.getMessage(chat_id,msg.reply_to_message_id_,setowner_reply,nil)
       end
       if input == "demoteowner" and is_sudo(msg) and msg.reply_to_message_id_ then
